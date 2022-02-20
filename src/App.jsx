@@ -16,7 +16,7 @@ function App() {
           </button>
         </p>
         <p>
-          Edit <code>App.jsx</code> and see changes.
+          Edit <code>App.jsx</code> and see some changes.
         </p>
         <p>
           <a
