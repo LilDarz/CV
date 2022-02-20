@@ -1,23 +1,22 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
+import BlogPost from "./components/blogPost"
 import logo from './logo.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const inputRef = useRef(null)
+  const [myName, setMyName] = useState("Dat")
+  
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello My name is Dat</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and see some changes.
-        </p>
+        <p>Hello My name is {myName}</p>
+        <input placeholder='Enter something' ref={inputRef} />
+        <button onClick={() => setMyName(inputRef.current.value)}>Set name</button>
+        <BlogPost />
         <p>
           <a
             className="App-link"

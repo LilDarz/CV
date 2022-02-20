@@ -1,0 +1,16 @@
+.posts {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+}
+  
+.blogPost {
+    display: block;
+    box-shadow: 5px 5px black;
+    padding: 2rem;
+    background-color: #555555;
+    border-radius: 10px;
+    text-align: left;
+}
